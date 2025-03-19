@@ -1,0 +1,40 @@
+body{
+  background-color: #BDDDFC;
+}
+
+h1{
+  margin-left: 40%;
+  margin-top: 40px;
+}
+
+.forms{
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input{
+  width: 300px;
+  border-radius: 7px;
+  height: 25px;
+  margin-top: 10px;
+  
+}
+
+label{
+  margin-top: 8px;
+}
+.page{
+  margin-left: 40%;
+  background-color: aquamarine;
+  margin-right: 40%;
+  border-color: black;
+}
+
+.butt{
+  background-color: aqua;
+  width: 300px;
+  margin:0 auto;
+  text-align: center;
+}
