@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Library Management System - Dashboard</title>
+</head>
+<body>
+  <h1>Library Management System - Dashboard</h1>
+  <div class="page" id="dashboard">
+    <h2>Available Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody id="bookList">
+        <!-- Book entries will be populated here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="navigation">
+    <button onclick="window.location.href='index.html'">Logout</button>
+  </div>
+
+  <script>
+    // Sample book data
+    const books = [];
+    for (let i = 1; i <= 100; i++) {
+      books.push({
+        id: i,
+        title: `Book Title ${i}`,
+        author: `Author ${i}`,
+        genre: `Genre ${Math.ceil(Math.random() * 5)}`,
+        year: 2000 + (i % 21) // Random year between 2000 and 2020
+      });
+    }
+
+    // Function to display books in the table
+    function displayBooks() {
+      const bookList = document.getElementById('bookList');
+      books.forEach(book => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${book.id}</td>
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td>${book.genre}</td>
+          <td>${book.year}</td>
+        `;
+        bookList.appendChild(row);
+      });
+    }
+
+    // Call the function to display books on page load
+    window.onload = displayBooks;
+  </script>
+
+  <style>
+    body {
+      background-color: #E3F2FD;
+      color: #232d48;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .page {
+      margin: 0 auto;
+      background-color: rgb(204, 214, 255);
+      border: 1px solid black;
+      border-radius: 15px;
+      padding: 20px;
+      width: 80%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eae6ff;
+    }
+
+    .navigation {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .navigation button {
+      background-color: #eae6ff;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+      background-color: rgb(178, 240, 255);
+    }
+  </style>
+</body>
+</html>
