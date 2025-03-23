@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Library Management System</title>
+</head>
+<body>
+  <h1>Library Management System</h1>
+  <div class="page">
+    <form class="forms" id="loginForm" action="">
+      <label for="name">Name :</label>
+      <input type="name" id="name" required>
+      <label for="age">Age:</label>
+      <input type="age" id="age" required>
+      <label for="email">Email Id:</label>
+      <input type="email" id="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </form>
+    
+  </div>
+  <div class="page" id="gender">
+    <form class="forms" id="gender_form">
+      <label for="Gender">Gender:</label>
+      <input type="radio" name="gender" value="male" required> male
+      <input type="radio" name="gender" value="female" required> female
+      
+    </form>
+    <!-- User Type (Student, Faculty, Librarian) -->
+
+    <select class="page" name="user" id="user" required>
+      <option value="" disabled selected>Select Role</option>
+      <option value="Student">Student</option>
+      <option value="Faculty">Faculty</option>
+      <option value="Librarian">Librarian</option>
+
+
+
+
+    </select>
+
+      <button type="submit" class="butt" id="signUp_button">Sign In</button>
+
+  </div>
+
+  <div class="sample">
+
+
+  </div>
+
+  
+  <script src="index.js"></script>
+</body>
+</html>
