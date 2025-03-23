@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Library Management System</h1>
-  <div class="page">
+  <div class="page" id="sign_up1">
     <form class="forms" id="loginForm" action="">
       <label for="name">Name :</label>
       <input type="name" id="name" required>
@@ -18,31 +18,24 @@
       <input type="email" id="email" required>
       <label for="password">Password:</label>
       <input type="password" id="password" required>
-    </form>
-    
-  </div>
-  <div class="page" id="gender">
-    <form class="forms" id="gender_form">
-      <label for="Gender">Gender:</label>
-      <input type="radio" name="gender" value="male" required> male
-      <input type="radio" name="gender" value="female" required> female
       
-    </form>
-    <!-- User Type (Student, Faculty, Librarian) -->
-
     <select class="page" name="user" id="user" required>
       <option value="" disabled selected>Select Role</option>
       <option value="Student">Student</option>
       <option value="Faculty">Faculty</option>
       <option value="Librarian">Librarian</option>
-
-
-
-
+      <form class="forms" id="gender_form">
+        <label for="Gender">Gender:</label>
+        <input type="radio" name="gender" value="male" required> male
+        <input type="radio" name="gender" value="female" required> female
+        
+      </form>
     </select>
+    </form>
 
-      <button type="submit" class="butt" id="signUp_button">Sign In</button>
+    <button type="submit" class="butt" id="signUp_button">Sign In</button>
 
+    
   </div>
 
   <div class="sample">
