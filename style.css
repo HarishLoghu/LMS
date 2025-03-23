@@ -1,77 +1,67 @@
-body{
+body {
   background-color: #E3F2FD;
   color: #232d48;
-  /* #BDDDFC */
-}
-
-h1{
-  text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.forms{
-  margin-top: 200px;
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.forms {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-input{
-  width: 300px;
+input {
+  width: 80%;
   border-radius: 7px;
-  height: 25px;
+  height: 35px;
   margin-top: 10px;
-  
+  padding: 5px;
+  border: 1px solid #ccc;
 }
 
-label{
-  margin-top: 8px;
+label {
+  margin-top: 15px;
 }
-.page{
-  margin-left: 40%;
+
+.page {
+  margin: 0 auto;
   background-color: rgb(204, 214, 255);
-  margin-right: 40%;
-  border-color: black;
-  height: 250px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
   width: 350px;
-  border-radius: 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.butt{
+.butt {
   background-color: #eae6ff;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:0 auto;
-  margin-top:40px;
-  height: 30px;
-  width: 150px;
+  width: 80%;
+  height: 40px;
   border-radius: 15px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   cursor: pointer;
-  border-color: aliceblue;
-  transition: transform 0.3s, background-color 0.3s;
-  
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
 }
 
-.butt:hover{
+.butt:hover {
   background-color: rgb(178, 240, 255);
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:0 auto;
-  margin-top:40px;
-  height: 30px;
-  width: 150px;
-  border-radius: 15px;
-  cursor: pointer;
-  border-color: rgb(128, 255, 234);
+  transform: scale(1.05);
 }
 
-#sign_up{
-  display: flex;
-  justify-content: center;
+#sign_up {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#sign_up a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
 }
