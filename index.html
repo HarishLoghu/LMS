@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Library Management System</title>
 </head>
 <body>
   <h1>Library Management System</h1>
   <div class="page">
-    <form  class = "forms" action="">
+    <form class="forms" id="loginForm" action="">
       <label for="email">Email Id:</label>
-      <input type="password">
-      <label for="password">Password :</label>
-      <input type="password">
+      <input type="email" id="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit" class="butt">Sign In</button>
     </form>
-    <button class="butt">Sign In</button>
-    
   </div>
 
   <div id="sign_up">
-    <a  href="">sign up</a>
+    <a href="">Sign Up</a>
   </div>
- 
   
+  <script src="index.js"></script>
 </body>
 </html>
