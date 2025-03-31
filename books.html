@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Books</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2, h3 {
+            color: #4A47A3;
+            font-size: 24px;
+        }
+        .book-list {
+            margin-top: 25px;
+        }
+        .book-item {
+            padding: 15px;
+            background: #E0E7FF;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+        .book-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .actions {
+            display: flex;
+            gap: 15px;
+        }
+        button {
+            background: #6B46C1;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Available Books</h2>
+        <div class="book-list" id="books-page"></div>
+        <button onclick="goBack()">Back to Dashboard</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const booksAvailable = [
+                { title: "Introduction to Algorithms", author: "Cormen" },
+                { title: "The Pragmatic Programmer", author: "Andrew Hunt" },
+                { title: "Design Patterns", author: "Erich Gamma" },
+                { title: "Eloquent JavaScript", author: "Marijn Haverbeke" }
+            ];
+    
+            document.getElementById("books-page").innerHTML = booksAvailable.map(book => `
+                <div class="book-item">
+                    <div class="book-details">
+                        <strong>${book.title}</strong>
+                        <span>by ${book.author}</span>
+                    </div>
+                    <div class="actions">
+                        <button onclick="borrowBook('${book.title}')">Borrow</button>
+                    </div>
+                </div>
+            `).join('');
+        });
+    
+        function goBack() {
+            window.location.href = "dashboard.html";
+        }
+
+        function borrowBook(bookTitle) {
+            alert(`You have borrowed: ${bookTitle}`);
+        }
+    </script>
+</body>
+</html>

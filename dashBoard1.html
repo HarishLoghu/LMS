@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2, h3 {
+            color: #4A47A3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px;
+            background: #E0E7FF;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        button {
+            background: #6B46C1;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="dashboard"></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userName = "Harish";
+            const booksBorrowed = [
+                { title: "The Art of Computer Programming", dueDate: "2025-04-10" },
+                { title: "Clean Code", dueDate: "2025-04-15" }
+            ];
+            const balanceDue = 15.00;
+            const transactions = [
+                { date: "2025-03-25", amount: 5.00, type: "Fine Paid" },
+                { date: "2025-03-10", amount: 10.00, type: "Fine Paid" }
+            ];
+    
+            document.getElementById("dashboard").innerHTML = `
+                <h2>Welcome, ${userName}!</h2>
+                <h3>Books Borrowed:</h3>
+                <ul>
+                    ${booksBorrowed.map(book => `<li>${book.title} (Due: ${book.dueDate})</li>`).join('')}
+                </ul>
+                <h3>Balance Due: <span style="color: red;">$${balanceDue.toFixed(2)}</span></h3>
+                <button onclick="payBalance()">Pay Now</button>
+                <h3>Recent Transactions:</h3>
+                <ul>
+                    ${transactions.map(tx => `<li>${tx.date} - ${tx.type}: $${tx.amount.toFixed(2)}</li>`).join('')}
+                </ul>
+            `;
+        });
+    
+        function payBalance() {
+            alert("Redirecting to payment gateway...");
+        }
+    </script>
+</body>
+</html>
